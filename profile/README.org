@@ -11,16 +11,16 @@
   - [[#comment-block------very-minimally-provides-orgcmntbegin-and-orgcmntend][comment-block  --- Very minimally provides orgCmntBegin and orgCmntEnd]]
   - [[#comeega-polymode-for-collaborative-org-mode-enhanced-emacs-generalized-authorship][COMEEGA: Polymode for Collaborative Org-Mode Enhanced Emacs Generalized Authorship]]
 - [[#blee-comeega-emacs-packages][Blee COMEEGA Emacs Packages]]
-  - [[#blee-lib----][blee-lib ---]]
+  - [[#blee-lib-----common-blee-library][blee-lib --- Common Blee Library]]
   - [[#poly-dblock------regexp-s-for-org-dblock-in-many-major-modes][poly-dblock  --- regexp-s for org-dblock in many major modes]]
   - [[#blee-dblocks------dblocks-for-various-major-modes][blee-dblocks  --- dblocks for various major modes]]
   - [[#mua-abstract-----facilities-for-configuring-gnus-and-more][mua-abstract --- Facilities for configuring Gnus and more]]
-  - [[#mtdt-----mail-templating-distribution-and-tracking][mtdt --- Mail Templating, Distribution and Tracking]]
+  - [[#mcdt-----mail-composition-templating-distribution-and-tracking][mcdt --- Mail Composition, templating, Distribution and Tracking]]
 - [[#emacs-contributions][Emacs Contributions]]
   - [[#persian-input-methods][Persian Input methods]]
   - [[#farsi-emacs-tutorial][Farsi Emacs Tutorial]]
   - [[#arabic-emacs-tutorial][Arabic Emacs Tutorial]]
-- [[#blee-bootstarp][Blee Bootstarp]]
+- [[#blee-naming-convention][Blee Naming Convention]]
 
 * About Blee --- ByStar Libre-Halaal Emacs Environment
 
@@ -42,7 +42,7 @@ https://github.com/bx-blee/comeega
 
 All Blee packages are written in COMEEGA
 
-** blee-lib ---
+** blee-lib --- Common Blee Library
 
 ** poly-dblock  --- regexp-s for org-dblock in many major modes
 
@@ -50,7 +50,7 @@ All Blee packages are written in COMEEGA
 
 ** mua-abstract --- Facilities for configuring Gnus and more
 
-** mtdt --- Mail Templating, Distribution and Tracking
+** mcdt --- Mail Composition, templating, Distribution and Tracking
 
 * Emacs Contributions
 
@@ -66,5 +66,6 @@ https://github.com/bx-blee/tutorials
 
 https://github.com/bx-blee/tutorials
 
+* Blee Naming Convention
 
-* Blee Bootstarp
+https://github.com/bx-blee/blee-lib/bleeElispFramework.org
