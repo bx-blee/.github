@@ -1,15 +1,70 @@
 #+title:  About Blee Github Organization
 #+OPTIONS: toc:4
 
-*bx-blee*: The Blee Github Organization --- A collection of Blee repos
+*bx-blee*: The Blee Github Organization --- A collection of Blee Repos
 
 * Table Of Contents     :TOC:
-- [[#blee-packages][Blee Packages]]
-  - [[#orgcommentblock][orgCommentBlock:]]
-  - [[#comeega][COMEEGA:]]
+- [[#about-blee-----bystar-libre-halaal-emacs-environment][About Blee --- ByStar Libre-Halaal Emacs Environment]]
+- [[#part-of-bystar][Part Of ByStar]]
+  -  [[#maintained-and-supported-by-mohsen-banan-libre-halaal-foundation-and-neda][Maintained And Supported By Mohsen Banan, Libre-Halaal Foundation and Neda]]
+- [[#emacs-packages][Emacs Packages]]
+  - [[#comment-block------very-minimally-provides-orgcmntbegin-and-orgcmntend][comment-block  --- Very minimally provides orgCmntBegin and orgCmntEnd]]
+  - [[#comeega-polymode-for-collaborative-org-mode-enhanced-emacs-generalized-authorship][COMEEGA: Polymode for Collaborative Org-Mode Enhanced Emacs Generalized Authorship]]
+- [[#blee-comeega-emacs-packages][Blee COMEEGA Emacs Packages]]
+  - [[#blee-lib----][blee-lib ---]]
+  - [[#poly-dblock------regexp-s-for-org-dblock-in-many-major-modes][poly-dblock  --- regexp-s for org-dblock in many major modes]]
+  - [[#blee-dblocks------dblocks-for-various-major-modes][blee-dblocks  --- dblocks for various major modes]]
+  - [[#mua-abstract-----facilities-for-configuring-gnus-and-more][mua-abstract --- Facilities for configuring Gnus and more]]
+  - [[#mtdt-----mail-templating-distribution-and-tracking][mtdt --- Mail Templating, Distribution and Tracking]]
+- [[#emacs-contributions][Emacs Contributions]]
+  - [[#persian-input-methods][Persian Input methods]]
+  - [[#farsi-emacs-tutorial][Farsi Emacs Tutorial]]
+  - [[#arabic-emacs-tutorial][Arabic Emacs Tutorial]]
+- [[#blee-bootstarp][Blee Bootstarp]]
 
-* Blee Packages
+* About Blee --- ByStar Libre-Halaal Emacs Environment
 
-** orgCommentBlock:
+* Part Of ByStar
 
-** COMEEGA:
+**  Maintained And Supported By Mohsen Banan, Libre-Halaal Foundation and Neda
+
+* Emacs Packages
+
+** comment-block  --- Very minimally provides orgCmntBegin and orgCmntEnd
+
+https://github.com/bx-blee/comment-block
+
+** COMEEGA: Polymode for Collaborative Org-Mode Enhanced Emacs Generalized Authorship
+
+https://github.com/bx-blee/comeega
+
+* Blee COMEEGA Emacs Packages
+
+All Blee packages are written in COMEEGA
+
+** blee-lib ---
+
+** poly-dblock  --- regexp-s for org-dblock in many major modes
+
+** blee-dblocks  --- dblocks for various major modes
+
+** mua-abstract --- Facilities for configuring Gnus and more
+
+** mtdt --- Mail Templating, Distribution and Tracking
+
+* Emacs Contributions
+
+** Persian Input methods
+
+https://github.com/bx-blee/persian-input-method
+
+** Farsi Emacs Tutorial
+
+https://github.com/bx-blee/tutorials
+
+** Arabic Emacs Tutorial
+
+https://github.com/bx-blee/tutorials
+
+
+* Blee Bootstarp
