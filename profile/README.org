@@ -9,6 +9,7 @@
   -  [[#maintained-and-supported-by-mohsen-banan-libre-halaal-foundation-and-neda][Maintained And Supported By Mohsen Banan, Libre-Halaal Foundation and Neda]]
 - [[#emacs-packages][Emacs Packages]]
   - [[#comment-block------very-minimally-provides-orgcmntbegin-and-orgcmntend][comment-block  --- Very minimally provides orgCmntBegin and orgCmntEnd]]
+    - [[#httpsgithubcombx-bleecomment-block][https://github.com/bx-blee/comment-block]]
   - [[#comeega-polymode-for-collaborative-org-mode-enhanced-emacs-generalized-authorship][COMEEGA: Polymode for Collaborative Org-Mode Enhanced Emacs Generalized Authorship]]
 - [[#blee-comeega-emacs-packages][Blee COMEEGA Emacs Packages]]
   - [[#blee-lib-----common-blee-library][blee-lib --- Common Blee Library]]
@@ -21,6 +22,8 @@
   - [[#farsi-emacs-tutorial][Farsi Emacs Tutorial]]
   - [[#arabic-emacs-tutorial][Arabic Emacs Tutorial]]
 - [[#blee-naming-convention][Blee Naming Convention]]
+- [[#bystar-libre-halaal-emacs-user-environment-blee][ByStar Libre-Halaal Emacs user Environment (Blee)]]
+  - [[#collaborative-org-mode-enhanced-emacs-generalized-authorship][Collaborative Org-Mode Enhanced Emacs Generalized Authorship]]
 
 * About Blee --- ByStar Libre-Halaal Emacs Environment
 
@@ -32,7 +35,7 @@
 
 ** comment-block  --- Very minimally provides orgCmntBegin and orgCmntEnd
 
-https://github.com/bx-blee/comment-block
+*** https://github.com/bx-blee/comment-block
 
 ** COMEEGA: Polymode for Collaborative Org-Mode Enhanced Emacs Generalized Authorship
 
@@ -69,3 +72,140 @@ https://github.com/bx-blee/tutorials
 * Blee Naming Convention
 
 https://github.com/bx-blee/blee-lib/bleeElispFramework.org
+
+
+* ByStar Libre-Halaal Emacs user Environment (Blee)
+   :PROPERTIES:
+   :CUSTOM_ID: bystar-libre-halaal-emacs-user-environment-blee
+   :END:
+
+ [sec:ByStarLibre-HalaalEmacsuserEnvironment(Blee)]
+
+Blee, ByStar Libre-Halaal Emacs Environment, is ByStar's primary usage
+environment. It is fully integrated with BISOS and Blee is aware of all
+ByStar conceptual constructs.
+
+Conventional OS wisdom calls for separation of OS functionality from
+user-interface/usage-environment. But BISOS is not a traditional OS and
+Emacs is not a traditional usage-environment.
+
+The concepts of universal platform and software-service-continuum that
+we presented have ramifications on usage and user experience. ByStar
+services can thus be greatly enhanced by providing the user with a
+"matched" environment---a user environment that is closely integrated
+with the service. This provides the user with features and capabilities
+that go far beyond what is possible using the traditional generic
+browser access.
+
+By fully integrating BISOS and Blee, we accomplish a degree of cohesion
+and conviviality within the ByStar Digital Ecosystem that is absent in
+the American internet environments. Blee is significantly more broad and
+sophisticated than other usage environments.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bleeCentricPerspectiveOfBxDE.pdf]]
+
+In
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+we depict that Blee is part of BISOS and that Blee includes Emacs. Think
+of
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+as a containment hierarchy. The Libre-Halaal ByStar Digital Ecosystems
+contains both Usage-Side BISOS platforms and Service-Side BISOS
+platforms. The Usage-Side BISOS platform contains Blee. And Blee
+contains Emacs.
+
+Emacs is a 40-plus years old editor centered usage environment, with a
+Lisp engine at its core and an extremely powerful display and editing
+engine in its nucleus. Emacs is one of the oldest Free Software in
+continuous use. Over the past 40 plus years, sophisticated engineers
+have added support for anything and everything to Emacs. Emacs's well
+designed fundamental abstractions make it the most convivial usage
+environment. Emacs is a multi-lingual editor that supports most human
+languages. But out of the box, Emacs is clunky and difficult to use.
+
+Blee serves two purposes:
+
+1. Blee integrates with BISOS and ByStar services and ByStar concepts.
+
+2. Blee makes Emacs less clunky and easier to use without losing any of
+   Emacs's conviviality.
+
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+depicts that Emacs contains a very powerful display engine, a very
+powerful Lisp engine, a very powerful input methods engine and a very
+powerful applications development framework. Emacs is primarily known as
+a textual environment. But it is more than that. Emacs is now capable of
+handling multimedia (images/audio/video) as well. Emacs's display engine
+supports bidirectional (bidi) text and is fully multilingualized. Emacs
+supports input methods for many human languages. Emacs's Lisp engine and
+its applications development framework allow for convenient development
+and customization of applications.
+
+Blee builds on Emacs.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bleeFeaturesOverview.pdf]]
+
+Figure [[#fig:bleeFeaturesOverview][[fig:bleeFeaturesOverview]]] shows
+some of the salient features of Blee. For each of the programming
+languages of BISOS (Python, Bash, Elisp, LaTeX, Web environment and
+C/C++) Blee provides Interactive Development Environments (IDEs) that go
+beyond the language and include the frameworks and libraries of BISOS.
+
+The usage of BISOS's Integration Framework (PyCS) described in
+Section [[#sec:PyCS:BISOS'sIntegrationFramework][[sec:PyCS:BISOS'sIntegrationFramework]]]
+is facilitated in Blee through Blee Command Services Players. Each
+Command Service, whether it is a command-line or a remote-operation
+(microservice), is expectations complete and can be run more
+conveniently through Blee.
+
+Of course, all of BISOS and Blee is self-documented. The documentation
+takes the form of Blee-Org-Panels which take the form of related
+org-files. Unlike typical documentation, Blee Org Panels are active. You
+can modify, configure and customize BISOS and Blee from within
+Blee-Org-Panels. Additionally, Blee-Org-Panels can be used by users to
+organize their own information and applications.
+
+All of the key abstractions of BISOS (BPO, PALS, PAAI, AAS), can be
+managed through Blee.
+
+The combination of Blee and BISOS fully wraps development, management
+and usage of ByStar services. Such universality facilitates continuous
+growth of ByStar.
+
+** Collaborative Org-Mode Enhanced Emacs Generalized Authorship
+(COMEEGA)
+    :PROPERTIES:
+    :CUSTOM_ID: collaborative-org-mode-enhanced-emacs-generalized-authorship-comeega
+    :END:
+
+ [sec:CollaborativeOrg-ModeEnhancedEmacsGeneralizedAuthorship(COMEEGA)]
+
+All coding and all writing in BISOS is based on a model called: COMEEGA
+(Collaborative Org Mode Enhanced Emacs Generalized Authorship). COMEEGA
+is the primary authorship model of Blee and BISOS.
+
+COMEEGA is a Blee concept and an Emacs package for enhancing readability
+and usability of various authorship-major-modes with augmentation by
+org-mode content. COMEEGA is the inverse of Literate Programming, where
+code is written in native programming mode and then augmented with
+comments and doc-strings in org-mode. COMEEGA is applicable to
+authorship in general and programming languages (elisp, python, bash)
+and publishing (LaTeX, html) in particular. When applicable, doc-strings
+can be written in org-mode. File related TODOs and scheduling can be
+specified in org-mode and execution of functions can be facilitated from
+within the file. In effect all org-mode capabilities are combined with
+the native authorship-major-mode capabilities.
+
+The "collaborative" dimension of COMEEGA is inherited from git and
+org-mode. COMEEGA-files are usually in git repos. File level
+collaboration maintains the natural communication context. Org-mode
+TODOs and scheduling, delegation, tracking and rich commenting allow for
+targeted collaboration. org-archiving combined with git fundamentals
+provide convenient collaboration and responsibility oriented
+audit-trails.
+
+
+
+# Local Variables:
+# eval: (setq-local toc-org-max-depth 4)
+# End:

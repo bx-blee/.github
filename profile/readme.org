@@ -1,0 +1,1392 @@
+#+TITLE: BISOS: ByStar Internet Services Operating System
+#+DATE: <2024-02-19 Mon 16:27>
+#+AUTHOR: Mohsen BANAN
+
+* Overview
+
+The *Libre-Halaal ByStar Digital Ecosystem* (/By* DE/) is an interdisciplinary, and
+ethics-oriented non-proprietary digital ecosystem which challenges the existing
+proprietary American digital ecosystem while operating concurrently alongside
+it. On a global scale, By* provide Internet Application Services which preserve
+autonomy and privacy of the individual. *BISOS*: (/By* Internet Services Operating
+System/) is a unified and universal framework for developing both internet
+services and software-service continuums that use internet services. BISOS is a
+layer on top of Debian. *Blee*: (/BISOS Libre-Halaal Emacs Environment/) is a layer
+on top of Emacs and BISOS, which creates a comprehensive integrated usage and
+development environment. Blee and BISOS are fully integrated. See the "*Nature of
+Polyexistentials*" book for the bigger picture of how all of ByStar fits together.
+
+For bootstraping BISOS, Blee and ByStar; you can start at: https://github.com/bxgenesis/start
+
+Here we produce the basic concepts of BISOS.
+
+* Table of Contents     :TOC:
+- [[#overview][Overview]]
+-  [[#conceptoftheuniversalinternetservicesos][Concept of the Universal Internet Services OS]]
+  - [[#overviewofbisosandbystardigitalecosystem][Overview of BISOS and ByStar Digital Ecosystem]]
+  - [[#bisos-engineering-philosophy-and-ideology][BISOS Engineering Philosophy and Ideology]]
+  - [[#bisos-an-over-debian-pure-blend][BISOS: an Over Debian Pure Blend]]
+  - [[#bisoss-basic-unit-bisos-site][BISOS's Basic Unit: BISOS-Site]]
+  - [[#bisos-portable-objects-bpo][BISOS Portable Objects (BPO)]]
+  - [[#bisos-possession-assertable-libre-services-pals][BISOS Possession Assertable Libre Services (PALS)]]
+  - [[#bisos-model-of-platform-universalityand-software-service-continuums][BISOS Model of Platform Universalityand Software-Service Continuums]]
+  - [[#pycs-python-command-servicesbisoss-integration-framework][PyCS (Python Command Services):BISOS's Integration Framework]]
+  - [[#bystar-libre-halaal-emacs-user-environment-blee][ByStar Libre-Halaal Emacs user Environment (Blee)]]
+  - [[#bisossoftware-servicecontinuumapps][BISOS Software-Service Continuum Apps]]
+  - [[#privacy-and-regulatory-ramifications-of-bisos][Privacy and Regulatory Ramifications of BISOS]]
+  - [[#bystar-and-bisos-security][ByStar and BISOS Security]]
+  - [[#bystar-and-edge-oriented-uses-of-bisos][ByStar and Edge Oriented Uses of BISOS]]
+- [[#the-full-big-picture-of-bystar-bisos-and-blee][The Full Big Picture of ByStar, BISOS and Blee]]
+
+*  Concept of the Universal Internet Services OS
+   :PROPERTIES:
+   :CUSTOM_ID: concept-of-the-universal-internet-services-os
+   :END:
+
+The concept of an internet services operating system, or a common
+foundation, platform, and framework for the development of internet
+services, is not new. Proprietary internet service providers have their
+own proprietary and closed Internet Services OS. However, on the
+non-proprietary internet services side, this concept has not been
+formalized, structured, and cultivated. There is some precedence for
+this, and we can use this as a starting point.
+
+Shortly after the internet started to impact society (say in 1994) and
+shortly after Linux became widespread, the idea of a server-side
+Internet Services OS appeared as "The LAMP Stack".
+
+*** The Early LAMP Precedence
+    :PROPERTIES:
+    :CUSTOM_ID: the-early-lamp-precedence
+    :END:
+
+LAMP is an acronym that stands for "Linux, Apache, MySQL,
+Perl/PHP/Python". Packaged together, they create an application stack
+that is both free to use and open source which functions as a general
+purpose web server.
+
+In 1994, the Common Gateway Interface (CGI) was introduced in CERN
+httpd, allowing for the server-side execution of code to create dynamic
+webpages. In a sense, this can be considered the genesis of internet
+application services. This made it possible to create a LAMP stack (the
+free general-purpose web server) using Linux, CERN httpd, and
+server-side programming languages such as Perl. However, it wasn't until
+the release of Postgre95 that a free database was available. Finally, in
+1996, MySQL was released online, completing the LAMP stack.
+
+Validity of the LAMP stack as a server-side web services generic OS was
+established through its widespread use in the late 1990s. Many of the
+dot-con era firms ran their websites with LAMP.
+
+We recognize what is generally labeled "The LAMP Stack" as a very
+rudimentary Internet Application Services OS. LAMP had the following
+characteristics.
+
+1. LAMP was a layer on top of Linux distributions
+
+2. LAMP was a server-side stack
+
+3. LAMP addressed a certain segment of internet application services.
+   Its scope was websites development.
+
+4. LAMP focused on a very specific profile of the Linux distribution ---
+   Apache and MySql.
+
+5. LAMP focused on a specific programming language --- one of Perl, PHP
+   or Python.
+
+Extending and improving the concept of LAMP can lead to the notion of "A
+Universal Internet Services OS".
+
+Such an extension involves two dimensions:
+
+1. An Internet Services OS should cover all internet services --- not
+   just web services.
+
+2. An Internet Services OS should fully cover all sides --- clients,
+   servers, things in the middle and software-service-continuums.
+
+By "Universal" we are referring to this notion of "covering all sides"
+from phones and tablets to mainframes and sever-clusters. This idea of
+"Universal Services OS" builds on Debian's concept of "The Universal
+Software Operating System".
+
+*** Operating System, Internet Application Serviceand Digital Ecosystem
+    :PROPERTIES:
+    :CUSTOM_ID: operating-system-internet-application-serviceand-digital-ecosystem
+    :END:
+
+Almost everyone uses email. Email is a widely used application. To make
+things more explicit, we will use email as an example of an application
+service.
+
+In
+Figure [[#fig:bystarAndProprietaryDEs][[fig:bystarAndProprietaryDEs]]],
+let's consider email in the context of operating systems, internet
+application service and digital ecosystems.
+
+First, let's take a look at what is happening in the proprietary
+universe. The five major American proprietary tech companies (Google,
+Microsoft, Apple, Facebook, and Amazon) have created five distinct
+digital ecosystems as competing enclaves. In
+Figure [[#fig:bystarAndProprietaryDEs][[fig:bystarAndProprietaryDEs]]],
+, we are focusing on the first 3 and each of their office and email
+environments. These ecosystems are mostly separate and isolated from one
+another, and the economic model of these proprietary digital ecosystems
+is "Surveillance Capitalism". As such, when users sign up for a free
+email account, they are voluntarily forgoing much of their privacy.
+Sadly, the rest of the world is becoming Americanized through the
+American Internet. Each of these enclaves also have Mail User Agents
+that are fully integrated into their digital ecosystems, providing users
+with address books, calendars, time management and planning tools,
+multi-lingual authoring tools, and more.
+
+Now, let's focus on the right side of this picture. On the
+non-proprietary side, based on the FOSS model, we have ended up with
+lots of components. We have Debian as a platform, we have Emacs as an
+editor-centered office environment and lots of great applications. But
+on the non-proprietary side we don't have anything that can reasonably
+be considered a digital ecosystem.
+
+We need non-proprietary digital ecosystems. And that is what ByStar is.
+
+In proprietary digital ecosystems, the scope of the operating system
+(Chrome, Android, Windows, MacOS) is limited to the usage-side. The
+service-side OS is unknown due to the proprietary services being opaque.
+The concept of an Internet Services OS is well established inside of
+each of the proprietary services providers. Each has their own and parts
+of their Internet Services OS are exposed to their "Cloud" users.
+
+On the FOSS side, the scope of the LAMP style operating systems is
+limited to the service-side, with the usage-side being considered
+agnostic. ByStar and BISOS provide a powerful and universal solution,
+covering both the service-side and the usage-side.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bystarAndProprietaryDEs.pdf]]
+
+** Overview of BISOS and ByStar Digital Ecosystem
+   :PROPERTIES:
+   :CUSTOM_ID: overview-of-bisos-and-bystar-digital-ecosystem
+   :END:
+
+BISOS (ByStar Internet Services OS) is a reification of the abstraction
+of "A Universal Internet Services OS". ByStar is a concrete form of the
+abstraction of "A Unified Autonomous Digital Ecosystem".
+
+BISOS has the following key characteristics.
+
+1.  BISOS is both purposeful and general purpose. BISOS is ideology
+    driven. The general purpose of BISOS is to facilitate the creation
+    of digital ecosystems that prioritize autonomy and privacy. The
+    specific purpose of BISOS is to facilitate creation of the
+    Libre-Halaal ByStar Digital Ecosystem.
+
+2.  BISOS is layered on top of the Universal Debian software.
+
+3.  BISOS facilitates secure and private possession and portability of
+    the user's information through the abstraction of ByStar Portable
+    Objects (BPO).
+
+4.  BISOS enables the two-way transfer of Libre Services from the user's
+    own possession to Libre Service providers and between Libre Service
+    providers through the Possession Assertable Libre Services (PALS)
+    abstraction.
+
+5.  BISOS creates software-service continuums through universality on
+    both server-side and usage-side.
+
+6.  BISOS services integration and usage integration structures are
+    self-confined to select languages: Python, Bash, Elisp and C/C++.
+    Each language environment is augmented with BISOS native frameworks.
+    The primary integration framework of BISOS is
+    Python-Command-Services (PyCS).
+
+7.  The primary usage interface for BISOS is Blee (ByStar Libre-Halaal
+    Emacs Environment), which is comprehensive and extends to
+    development environments.
+
+8.  BISOS server-side PALS features are based on specific profiles from
+    Debian packages collection. The profiles primary focus on autonomous
+    email and autonomous content publication.
+
+9.  BISOS usage-side capabilities are based on specific profiles from
+    Debian packages collection. The profiles primary focus on email
+    handling and content production.
+
+10. BISOS platforms are automated to be recreatable from BPO contained
+    information as physical and virtual images. Linux KVM is the only
+    supported virtualization model.
+
+11. BISOS's basic unit is a site. A BISOS-Site includes a private git
+    server and a registrar.
+
+BISOS facilities are used to create the infrastructure of ByStar and
+various types of ByStar services.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bystarPortableCapabilities.pdf]]
+
+Figure [[#fig:bystarPortableCapabilities][[fig:bystarPortableCapabilities]]]
+depicts layerings of BISOS and of ByStar services. The Universal Debian
+Gnu/Linux is our foundation on top of which BISOS resides.
+
+The box labeled "Services SW" refers to instances of BISOS service-side
+debian packages. The box labeled "Facilities SW" refers to instances of
+BISOS usage-side debian packages. Configuration information for packages
+reside in BPOs (By* Portable Objects).
+
+The combination of "Services SW" and its relevant configuration within a
+BPO, forms a "Portable Services Capability". The combination of
+"Facilities SW" and its relevant configuration within a BPO, forms a
+"Portable Facilities Capability".
+
+Possession Assertable Libre Service is a type of
+=Portable Services Capability=. Multi-Account Resident Mail Exchange
+Environment (MARMEE) is a type of =Portable Facility Capability=.
+
+Possession Assertable Autonomous Identities (PAAI) are types of BPOs
+which include the identifiers (e.g., domain names) that enable PALS to
+become Realized Services.
+
+The stack on the right side of
+Figure [[#fig:bystarPortableCapabilities][[fig:bystarPortableCapabilities]]]
+depicts BISOS's usage environment which we describe in
+Section [[#sec:ByStarLibre-HalaalEmacsuserEnvironment(Blee)][[sec:ByStarLibre-HalaalEmacsuserEnvironment(Blee)]]].
+
+The stack on the left side of
+Figure [[#fig:bystarPortableCapabilities][[fig:bystarPortableCapabilities]]]
+depicts evolution of platforms in BISOS. A BISOS-Platform is a Debian
+computer loaded with BISOS software. A BPO-Container is a BISOS-Platform
+which has received (contains) some BPOs. A PAAI-Container is a
+BPO-Container which ontains one or more PAAI-BPO.
+
+** BISOS Engineering Philosophy and Ideology
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-engineering-philosophy-and-ideology
+   :END:
+
+BISOS is purposeful and ideology driven. Parts of BISOS ideology are
+rooted in health of society. BISOS also reflects a particular
+engineering philosophy.
+Figure [[#fig:bxEngPhilosophy][[fig:bxEngPhilosophy]]] depicts our
+choices in adoption of philosophical characteristics from various
+software development groups, with some adjustments.
+
+**** Unix's Genericity and Conviviality
+     :PROPERTIES:
+     :CUSTOM_ID: unixs-genericity-and-conviviality
+     :CLASS: unnumbered
+     :END:
+
+BISOS is based on the "Unix" model. Not the "Linux" model. We draw a
+distinct differentiation between "Unix Philosophy" vs "Linux Philosophy"
+vs "Business Philosophy". Unix Philosophy is a set of cultural norms and
+philosophical approaches to convivial software development and usage.
+Unix Philosophy has been well articulated by Ken Thompson, Doug McIlroy,
+Kernighan, Pike and others.
+
+Linux Philosophy is a laissez faire adaptation of Unix Philosophy that
+results in software bloat.
+
+BISOS is firmly rooted in a Unix Philosophy and discounts the Business
+Philosophy and the Linux philosophy.
+
+**** Debian's Universality
+     :PROPERTIES:
+     :CUSTOM_ID: debians-universality
+     :CLASS: unnumbered
+     :END:
+
+Debian insists on running on everything. By everything we mean a large
+number of CPU architectures. This is accomplished on methodic and
+durable reliance on primary source code. By everything we also mean the
+range of very constrained environments to super computers.
+
+This is important for ByStar because BISOS inherits Debian's
+Universality.
+
+**** Emacs's Deep Integration
+     :PROPERTIES:
+     :CUSTOM_ID: emacss-deep-integration
+     :CLASS: unnumbered
+     :END:
+
+Blee, BISOS's usage environment, is based on Emacs. Some Emacs builds
+include a kitchen-sink icon. It is the one feature not yet implemented
+in Emacs.
+
+Emacs is an integral part of BISOS. It is a framework for consistent
+integration of internal and external applications. This in turn results
+in a very convivial usage environment which spans software development,
+content creation, interpersonal communication and integrated internet
+application services access.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bxEngPhilosophy.pdf]]
+
+** BISOS: an Over Debian Pure Blend
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-an-over-debian-pure-blend
+   :END:
+
+Debian defines Pure Blend as: "a subset of Debian that is configured to
+support a particular target group out-of-the-box. One way to understand
+this is a list of packages that gets installed to provide a focus of
+use."
+
+The lower layers of BISOS can be considered a Debian Pure Blend.
+BISOS-service-side has one deb-pkgs-profile and BISOS-usage-side has
+another deb-pkgs-profile.
+
+But BISOS goes beyond that. BISOS and Debian are not peers. BISOS is a
+layer on top of Debian. BISOS provides services-oriented facilities that
+go beyond the scope of Debian. BISOS has its own policies and practices
+that are a super set of Debian policies and practices. While the basic
+unit of Debian is a computer, the basic unit of BISOS is a BISOS-Site.
+
+** BISOS's Basic Unit: BISOS-Site
+   :PROPERTIES:
+   :CUSTOM_ID: bisoss-basic-unit-bisos-site
+   :END:
+
+Typically, the basic unit of an Operating System is one computer ---
+depending on the context the computer is called: a host, a system, a
+platform, a box, etc.
+
+With BISOS the basic unit is more than one computer. We call BISOS's
+basic unit: BISOS-Site. Fundamental BISOS abstractions are based on
+BISOS Portable Objects (BPO) which are implemented as git accounts. Some
+BPOs must be private. So, a BISOS-Site must include a private git server
+--- which is implemented as a Gitlab instance. BISOS's use of BPO is
+purely through a Python API interface. Gitlab GUI is hardly ever used.
+BISOS also relies on the uniqueness of names and numbers. BISOS
+therefore needs an automated registrar for some private names and
+numbers. For BISOS to fully operate, at a minimum it needs those
+services.
+
+A BISOS-Site also provides facilities for creation and management of
+Virtual Machines (VMs) and a simple BISOS-CMDB (configuration management
+database) --- a central repository for storing BISOS-Site related
+resource. For creation and recreation of VMs (image management), BISOS
+uses Vagrant.
+
+** BISOS Portable Objects (BPO)
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-portable-objects-bpo
+   :END:
+
+ [sec:BISOSPortableObjects(BPO)]
+
+A fundamental abstraction of BISOS is the concept of BISOS Portable
+Objects (BPO). BPOs are packages of information. There are some
+similarities between BPOs as packages of information and software
+packages such as deb-packages or rpm-packages.
+
+Like software packages, BPOs are named uniquely and can depend on each
+other and can be collectively installed and uninstalled. BPOs are used
+for many things similar to how the files system is used for many things.
+BPOs can be used to hold the complete configuration information of a
+system. BPOs can be used to hold configuration information for software
+packages. BPOs can be used to hold private user data. BPOs can be used
+to hold collections of content and source code.
+
+For its own operation, BISOS uses various BPO types. Other types of BPOs
+can be created or generic BPO types (for example the Project type) can
+be used.
+
+Each BPO consists of a number of Git Repositories (hereafter called
+"repos"). Each of the BPO's repos can be synchronized using generic Git
+tools. With Blee/Emacs we use MaGit exclusively.
+
+Scope of access and use of BPOs can be private, group, public or system
+oriented.
+
+BPOs can be private, residing entirely in the Inner Rims, and used for
+private exclusive use of their owners. Private BPOs are used by their
+owners for a variety of purposes. For example, one's address book
+(rolodex) can be captured in a private BPO. This allows for
+synchronization of the address book as a git based portable object
+across different devices and across different environments.
+
+BPOs can be used to facilitate collaboration among groups of autonomous
+users. Group BPOs are only accessible to you, and people you explicitly
+share access with. Group BPOs are functionally similar to GitHub private
+repositories --- but in a decentralized fashion instead of GitHub's
+central model.
+
+Public BPOs facilitate publication of content and public evolution of
+that content through git. Public BPOs are functionally similar to GitHub
+public repositories --- but in a decentralized fashion instead of
+GitHub's central model.
+
+System BPOs are BISOS specific information that contain system related
+information. System BPOs can be "materialized" and function as Virtual
+Machines and Services and PALS (Possession Assertable Libre Services).
+System BPOs can be used to capture System configurations and SBOMs
+(Software Bill Of Material). System BPOs can be private or public.
+
+BPOs are currently implemented as Gitlab accounts. Gitlab accounts are
+Unix non-login shell accounts. BISOS's interactions with Gitlab is
+exclusively through an API (Remote Operations). Each Gitlab account then
+can contain repos subject to common access control mechanisms. Gitlab
+accounts map to BPO-Identifiers (BPO-Id). Each BPO-id then maps to Unix
+non-login shell accounts. The Unix account then becomes the base for
+cloning of the repos in the corresponding Gitlab account.
+
+BPOs go through different states and stages. A "Registered" BPO reserves
+a particular name/number for that BPO. "Realization" of a BPO results in
+creation of the git account that holds the repositories of that BPO and
+its subsequent activation. "Activation" of the BPO results in creation
+of a non-login account on the system and cloning of the repositories of
+that BPO. Activated BPOs can then be kept in sync through Git. An
+activated System BPO can then be "Materialized". Materialization of a
+System BPO results in creation of BISOS entities.
+
+Combinations of profiled deb-packages for internet application services
+and their configurations in the form of BPOs can then create Libre
+Services that are possession assertable, portable and transferable.
+
+** BISOS Possession Assertable Libre Services (PALS)
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-possession-assertable-libre-services-pals
+   :END:
+
+ [sec:BISOSPossessionAssertableLibreServices(PALS)]
+
+Based on capabilities of BPOs and the capabilities of service-side
+profiled Debian packages, we can now create Libre Services.
+
+BISOS Libre Services can be thought of four parts:
+
+1. Libre-Halaal software of the services (usually a Debian Package)
+
+2. Configuration information for the software for the service (often as
+   a repo of a PALS-BPO)
+
+3. Names and numbers for binding of services (as a repo of a PAAI-BPO)
+
+4. Service owner data (in the form of one or more BPOs)
+
+This model provides for portability and transferability of Libre
+Services between network abodes. For example, a Libre Service at a
+provider can be transferred to its owner to be self-hosted.
+
+There are some similarities between PALS-BPO and container
+virtualization (Docker and Kubernetes). PALS-BPOs include comprehensive
+information for construction of services and these can be mapped to
+container virtualization. However, at this time BISOS does not use
+container virtualization, as it is redundant. BISOS uses BPOs to create
+and recreate Kernel-based Virtual Machines (KVM) inside of which
+PALS-BPOs are deployed.
+
+Self-hosting is the practice of running and maintaining a Libre Service
+under one's own full control at one's own premise. BISOS Possession
+Assertable Libre Services (PALS) can be initially self-hosted and then
+transferred to a Libre Service provider. PALS can also be initially
+externally hosted and then become self-hosted on demand. The concept of
+"transferability" between network abodes is well supported in BISOS.
+
+*** Network Abodes and Transferability
+    :PROPERTIES:
+    :CUSTOM_ID: network-abodes-and-transferability
+    :END:
+
+ [sec:NetworkAbodesandTransferability]
+
+In the proprietary American digital ecosystem, the concept of network
+abodes is mostly vague. Names such as cloud and edge are used without
+much precision, and, the concept of transferability simply does not
+exist. You cannot self-host your Gmail service.
+
+Within ByStar and BISOS, we have precise definitions for where Libre
+Services can be realized and where they can be transferred to. This is
+depicted in Figure [[#fig:networkAbodes][[fig:networkAbodes]]]
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/networkAbodes.pdf]]
+
+Let's define "edge" as point of demarcation between the public digital
+world and the physical world (and its associated private digital
+environment). In Figure [[#fig:networkAbodes][[fig:networkAbodes]]] this
+is depicted as a dotted red circle. When by physical world, we mean
+"things", then in the American Internet, we have the culture and lingo
+of IoT (Internet of Things) Edge Computing. But what if by the physical
+world, we mean people --- individuals?
+
+The three concentric circles on the outer side of the edge are called
+"Rims". These are:
+
+1. Exposed Rim.
+
+   Systems in the Exposed Rim are on your premise, and they are
+   externally visible. Wifi hotspots, routers and VPNs are usually in
+   the Exposed Rim. Self-Hosting of PALS occurs in the Exposed Rim. We
+   refer to the abode of the collection of Self-Hosted PALS as the
+   Public Rim. Systems in the Exposed Rim should be well secured as they
+   are vulnerable to direct attacks.
+
+2. Inner Rim.
+
+   Systems in the Inner Rim are on your premise behind a firewall.
+   private desktops, fileservers, private Gitlab and private registrars
+   are usually in the Inner Rim. Systems in the Inner Rim are usually
+   physically stationary.
+
+   The likes of security systems, media centers, and monitoring cameras
+   that in the proprietary model are considered
+   customer-premise-equipment (CPE) are regarded as yours in the ByStar
+   model. Such services of yours reside in your Inner Rim.
+
+3. Outer Rim.
+
+   Systems in the Outer Rim are usually portable devices and at this
+   time they are on your premise behind a firewall. Laptops, Pads,
+   Mobile-Phones (with wifi access) are usually in the Outer Rim.
+   Systems in the Outer Rim are usually portable devices.
+
+The four concentric circles on the outer side of the edge are called
+"Rings". These are:
+
+1. Collocation Ring.
+
+   Systems in the Collocation Ring are on somebody else's premise
+   (usually a data center), but they belong to you (or are rented by
+   you). A collocation data center is a physical facility that offers
+   space with the proper power, cooling, network connectivity and
+   security to host other people's computing hardware and servers. There
+   is a certain aspect of self-possession in the Collocation Ring.
+
+2. Private Cloud Ring.
+
+   Systems in the Private Cloud Ring are usually virtualized and are
+   under your exclusive access.
+
+3. Public Cloud Ring.
+
+   Systems in the Public Cloud Ring are usually virtualized and are
+   under your access.
+
+4. Public Internet Application Services.
+
+   Examples of Public Internet Application Services in the proprietary
+   American digital ecosystem are Gmail, Facebook and Instagram. You pay
+   for public proprietary internet application services by becoming the
+   product, through your privacy.
+
+In the model of the proprietary American digital ecosystem, a given
+internet application service typically permanently resides in the ring
+abodes and is not transferable to other service providers. The service
+belongs to the service provider and it is locked.
+
+In the ByStar model, the service belongs to its user and it is the user
+who decides where she wants to realize it. This transferability is
+accomplished through the abstractions of BPOs (BISOS Portable Objects),
+PALS (Possession Assertable Libre Services) and PAAI (Possession
+Assertable Autonomous Identities). In
+Figure [[#fig:networkAbodes][[fig:networkAbodes]]] the segment labeled
+"PAAI & PALS" spans the Exposed Rim, the Collocation Ring, the Private
+Cloud Ring, the Public Cloud Ring and the Application Services Ring.
+This means that a BISOS based Libre Services can be transferred between
+any of those network abodes.
+
+BISOS can also be used to provide access to proprietary internet
+application services. This is shown in the segment labeled "AAS" of
+Figure [[#fig:networkAbodes][[fig:networkAbodes]]]. Abstracted
+Application Services (AAS) are facilities that allow for abstraction of
+some proprietary internet application services to be used by BISOS. One
+such internet service is Gmail. Gmail can be used through Blee-Gnus and
+BISOS-MARMEE.
+
+*** Ramifications of Libre-Halaal Edge-Oriented Strategies
+    :PROPERTIES:
+    :CUSTOM_ID: ramifications-of-libre-halaal-edge-oriented-strategies
+    :END:
+
+ [sec:RamificationsofLibre-HalaalEdge-OrientedStrategies]
+
+To illustrate the privacy and autonomy-oriented benefits of the PALS
+model, let's compare and contrast the American Internet with ByStar in
+the context of a very simple but very important human application:
+"email". To be more concrete and specific, in the context of the
+American Internet, let's use the fictional example of an American
+politician called "Hillary Clinton". In the context of ByStar, let's use
+the fictional example of an Iranian engineer called "Mohsen Banan".
+
+In the American Internet environment, the individual typically has at
+least two email addresses. One is through her work, say at the State
+Department, as: "hillary.clinton@state.gov". The other is for personal
+use, as:\\
+"hillary.clinton@gmail.com". Paying attention to her email addresses, we
+note that "hillary.clinton" is always on the left side of the "@". This
+means that "gmail.com" has risen in the middle and controls
+"hillary.clinton@" --- and millions of others. This means that Google
+has full possession and full control over Hillary's personal emails. Her
+"hillary.clinton@gmail.com" emails are neither autonomous nor private.
+Now, since Hillary Clinton is an intelligent and powerful American
+politician, she has recognized that her privacy and autonomy are
+important and that her email communications should be under her full
+control. She is rich, so, she goes ahead and sets up her own email
+server in her basement. We don't know if that email server was based on
+proprietary software or not, but we do know that as an individualistic
+American, she was only focused on addressing her own email autonomy and
+privacy concerns. Email autonomy and privacy of society at large was not
+her concern.
+
+In the ByStar environment, the individual similarly also has two sets of
+email addresses. Mohsen's work email may well be under the control of
+his employer, but his private email service and email addresses are
+under his own control. For personal use, Mohsen has registered and
+obtained\\
+=mohsen.banan.byname.net= for himself.\\
+Notice that while =byname.net= is part of ByStar,\\
+=mohsen.banan.byname.net= belongs to Mohsen. Based on that, he can now
+create a series of email addresses for himself.\\
+For example, he can use "bystarPlan@mohsen.banan.byname.net" for matters
+related to distribution of this document.\\
+He can use "card@mohsen.banan.byname.net" on his visit cards.
+
+Now, let's compare and contrast the email addresses
+"hillary.clinton@gmail.com" and\\
+"myDesk@mohsen.banan.byname.net". The right-part of the '@' signifies
+ownership and control. The right part of '@' controls the left-part of
+'@'. So, =gmail.com= controls "hillary.clinton".\\
+While =mohsen.banan.byname.net= controls "myDesk" and Mohsen, owns\\
+=mohsen.banan.byname.net=. Notice that =gmail.com= controls millions of
+people through their left-part. In ByStar, millions of people can obtain
+their own right-parts and then control their own left-parts --- and own
+their own portable full email addresses.\\
+Notice that while =gmail.com= has positioned itself in the middle of the
+network,\\
+=mohsen.banan.byname.net= has positioned itself in the edge of the
+network. Longer domain names which fully take advantage of DNS's
+hierarchical design are manifestations of edge-oriented strategies.
+
+Next, let's compare and contrast the software of the =gmail.com= service
+against the software of\\
+=mohsen.banan.byname.net=. The software of =gmail.com= service is
+proprietary. It belongs to Google. We don't know what it does. When you
+hit the delete button for a particular email, you can no longer see that
+message. But perhaps Google is keeping all of your deleted messages
+somewhere, forever. Because it is all proprietary software, you just
+don't know what is actually happening with the emails that you may think
+are yours. The software of =mohsen.banan.byname.net= services is part of
+the public ByStar software. It is part of BISOS. It is a public
+resource. That entire software is internally transparent. On your
+behalf, the engineering profession knows what it does and what it does
+not. When you delete one of your own email messages, it can be known
+that it was truly deleted --- forever. This is what having a
+Libre-Halaal Service means.
+
+With ByStar in place, all the Hillary Clintons of this world can have
+their own email communications under their own full control. We invite
+Hillary Clinton to join ByStar. As an American politician, perhaps she
+can start thinking about solving her society's email problems --- not
+just her own. We welcome her assistance in promoting ByStar.
+
+Consider the privacy and autonomy of such edge-to-edge email
+communications between\\
+"myDesk@mohsen.banan.byname.net" and\\
+"myDesk@hillary.clinton.byname.net".\\
+The mail protocol traffic is of course end-to-end encrypted between\\
+=mohsen.banan.byname.net= and =hillary.clinton.byname.net=. The message
+itself can additionally be encrypted. At no point is any third party in
+possession of the clear-text message. Logs of the message transfer are
+only in the possession of the two edges. And all of this can be realized
+on an internet-scale.
+
+All ByStar individual services are designed to be end-to-end and
+edge-oriented. The concepts of end-to-end and edge-orientation are
+integral to ByStar's decentralized design, which stands in stark
+contrast to Gmail's highly centralized approach. However, these
+edge-oriented services don't need to reside on the "Rims" side of the
+network edge. Since ByStar individual services are possession-assertable
+and portable, they can also be provisioned in the "Rings". See
+Figure [[#fig:networkAbodes][[fig:networkAbodes]]] for the references to
+Edge, Rims and Rings. This provides for options of self-hosting or
+external-hosting of individual services. So, =byname.net= can be made to
+be as convenient as =gmail.com= yet preserves the guarantees of autonomy
+and privacy through being possession-assertable, portable, Libre-Halaal,
+and edge-oriented.
+
+While here we focused on the email service as an end-to-end
+edge-oriented strategy, similar approaches can be applied to other
+internet applications and intra-edge applications. In the edge-oriented
+ByStar model, when you control the thermostat in your own house, that
+can all happen as a ByStar intra-edge application without loss of
+privacy and autonomy.
+
+** BISOS Model of Platform Universalityand Software-Service Continuums
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-model-of-platform-universalityand-software-service-continuums
+   :END:
+
+ [sec:BISOSModelofPlatformUniversality]
+
+Earlier we made several points about the universality of BISOS. We
+pointed out that BISOS inherits Debian's universality, and that our
+design philosophy includes relying on a singular Unix with full
+cohesion.
+
+We have Service-Side BISOS for creation of internet services and we have
+Usage-Side BISOS for usage of internet services. These two create the
+BISOS software-service continuum. This is very powerful because the two
+sides are very consistent. This is depicted in
+Figure [[#fig:bxp-layerings][[fig:bxp-layerings]]].
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bxp-layerings.pdf]]
+
+Note in Figure [[#fig:bxp-layerings][[fig:bxp-layerings]]] that although
+the lowest layer (hardware) of the two stacks is very different, most of
+the rest of the stack is very common. Also note that on the top parts,
+capabilities are complimentary based on the common lower layers.
+
+The degree of consistency and cohesion that this universality creates if
+far superior to what exists today in the proprietary American digital
+ecosystem.
+
+*** BISOS Virtualization Platform
+    :PROPERTIES:
+    :CUSTOM_ID: bisos-virtualization-platform
+    :END:
+
+ [sec:BISOSVirtualizationPlatform]
+
+The left side of Figure [[#fig:bxp-layerings][[fig:bxp-layerings]]]
+depicts the Service Environment of BISOS. As shown, the BISOS Service
+Environment is based on Kernel-based Virtual Machine (KVM).
+
+BISOS Virtualization Platform uses KVM, virsh, and Vagrant to create the
+needed foundation so that System BPOs representing BISOS KVMs can be
+"Materialized" and "Re-Materialized". This permits us to transport VMs
+across hosts and also to view VMs and their services as reproducible on
+demand. This is the equivalent of viewing BISOS KVMs as disposable.
+
+With BISOS, we have chosen not to use the likes of Openstack. Even a
+minimal Openstack involves a fair amount resources and complexities
+which are oriented towards medium size data-centers. You can think of
+BISOS Virtualization Platform as a lightweight Openstack oriented
+towards autonomous edges. BISOS Virtualization Platform privide a good
+alternative to the likes of Openstack for small servers and
+data-centers.
+
+With BISOS, for PALS, we have chosen not to use the likes of
+Docker-containers, Kubernetes and OpenShift. The concept of Service BPOs
+allows us to abstract out service packages. The ByStar autonomous edge
+oriented model does not demand the types of scalability and elasticity
+that the likes of Kubernetes and OpenShift bring to the table. For
+Central ByStar Services, where we will use the likes of Kubernetes and
+OpenShift.
+
+** PyCS (Python Command Services):BISOS's Integration Framework
+   :PROPERTIES:
+   :CUSTOM_ID: pycs-python-command-servicesbisoss-integration-framework
+   :END:
+
+ [sec:PyCS:BISOS'sIntegrationFramework]
+
+BISOS is largely focused on configuration and integration of related
+software packages towards creation of consistent services. This is
+typically done with "scripts" that augment the software packages in a
+consistent way. By scripts, we mean programs that are executed at
+command line. At times we also need to build Remote Operations (RO) to
+accommodate remote invocation of central services.
+
+There are three fundamental important choices to be made:
+
+1. What programming language should we use for integration?
+
+2. What command-line framework should we use?
+
+3. What Remote Operations (Web Services, REST, Micro Services) framework
+   should we use?
+
+BISOS primarily uses Python and some Bash for scripting.
+
+There are various Python frameworks for command-line and web services.
+These include click, FastAPI, Flask, Django, RPyC and various others.
+None of these provide a comprehensive enough framework for BISOS. BPyF
+(BISOS Python Framework) is a comprehensive integration framework of
+BISOS that combines existing capabilities from various Python
+frameworks.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/pycsAnatomy.pdf]]
+
+As depicted in Figure [[#fig:pycsAnatomy][[fig:pycsAnatomy]]], BPyF
+consists of five major parts.
+
+- Common facilities --- logging, io, error handling, etc.
+
+- File Parameters (FP) and Schema of File Parameters --- BISOS's data
+  representation and configuration model
+
+- PyCS: Python Command Services
+
+- BISOS Abstractions
+
+- CS-Units and CS-MultiUnits
+
+In Figure [[#fig:pycsAnatomy][[fig:pycsAnatomy]]], boxes under the
+dashed line represent various libraries. General purpose libraries (on
+the right side is light green) provide common facilities such as IO,
+logging, error handling and configuration management which are used
+throughout BISOS. Various libraries that represent BISOS abstractions in
+Python such as BPOs, PALS and PAAI. These are shown on the left side in
+darker green.
+
+For data representation, BISOS uses its own model called File
+Parameters. The equivalent functionality of File Parameters is often
+provided by Yaml and Json in typical open-source software packages.
+
+*** PyCS Expectation Complete Operations (ECO)
+    :PROPERTIES:
+    :CUSTOM_ID: pycs-expectation-complete-operations-eco
+    :END:
+
+ [sec:PyCSExpectationCompleteOperations(ECO)]
+
+PyCS is rooted in the model of Expectation Complete Operations (ECO),
+which allows for local invocation of an ECO to map to command-line
+invocation and remote invocation of an ECO to map to the microservices
+model and Remote Operations. This universality of ECOs allows for
+command-line facilities to become microservices.
+
+Facilities for command line invocation are depicted above the dashed
+line, on the left side of "internet". Facilities in support of service
+(Remote Operation) performers are depicted above the dashed line, on the
+right side of "internet".
+
+Expectation complete operations are specified and implemented in
+CS-Units. A CS-Multi-Unit represents a collection of CS-Units. Notice
+that CS-Unit and CS-Multi-Unit boxes are replicated on both sides of
+"internet". This indicates that both commands and remote operations map
+to expectation complete operations.
+
+Each ECO is capable of describing everything expected from the operation
+in full detail which includes all typing information. The information in
+Expectation Complete Operation includes:
+
+- Name of the operation
+
+- All input parameters
+
+  - List of optional and mandatory parameters
+
+  - List of positional arguments
+
+  - Stdin expectations
+
+- All outcome parameters
+
+  - All result parameters
+
+  - All error parameters
+
+The information of expectation complete operation then maps to
+command-line verbs, parameters and arguments, and similarly for remote
+operations. The list of available verbs is specified by the
+CS-Multi-Unit. Since CS-Multi-Units are capable of describing all of the
+expectations of all of their operations, very powerful automated user
+interfaces for invocation of operations can be built. The "CS Player"
+box in Figure [[#fig:pycsAnatomy][[fig:pycsAnatomy]]] illustrates that.
+
+*** BISOS PyCS Remote Operations (Web Services)
+    :PROPERTIES:
+    :CUSTOM_ID: bisos-pycs-remote-operations-web-services
+    :END:
+
+ [sec:BISOSPyCSRemoteOperations(WebServices)]
+
+Many BISOS facilities need to be implemented and are implemented as
+remote operations. We use the concept and abstraction of remote
+operations instead of web services or microservices, to define network
+exposed operations.
+
+In BISOS, instead of choosing specific web services or rpc paradigms
+such as OpenAPI/Swagger, FastAPI, SOAP, gRPC, RPyC, etc, we bind our
+model of Expectation Complete Operations (ECO) to these at a later
+stage.
+
+At this time, PyCS remote operations are implemented using RPyC. RPyC or
+Remote Python Call, is a transparent library for symmetrical remote
+procedure calls, clustering, and distributed-computing. Use of RPyC is
+depicted with the line going through the vertical box labeled
+"internet". Names used by invokers and performers are shown in the boxes
+labeled "RO-Sap" (Remote Operation Service Access Point).
+
+PyCS framework provides a solid foundation for transformation of
+software into services and integration of software and services in
+BISOS.
+
+** ByStar Libre-Halaal Emacs user Environment (Blee)
+   :PROPERTIES:
+   :CUSTOM_ID: bystar-libre-halaal-emacs-user-environment-blee
+   :END:
+
+ [sec:ByStarLibre-HalaalEmacsuserEnvironment(Blee)]
+
+Blee, ByStar Libre-Halaal Emacs Environment, is ByStar's primary usage
+environment. It is fully integrated with BISOS and Blee is aware of all
+ByStar conceptual constructs.
+
+Conventional OS wisdom calls for separation of OS functionality from
+user-interface/usage-environment. But BISOS is not a traditional OS and
+Emacs is not a traditional usage-environment.
+
+The concepts of universal platform and software-service-continuum that
+we presented have ramifications on usage and user experience. ByStar
+services can thus be greatly enhanced by providing the user with a
+"matched" environment---a user environment that is closely integrated
+with the service. This provides the user with features and capabilities
+that go far beyond what is possible using the traditional generic
+browser access.
+
+By fully integrating BISOS and Blee, we accomplish a degree of cohesion
+and conviviality within the ByStar Digital Ecosystem that is absent in
+the American internet environments. Blee is significantly more broad and
+sophisticated than other usage environments.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bleeCentricPerspectiveOfBxDE.pdf]]
+
+In
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+we depict that Blee is part of BISOS and that Blee includes Emacs. Think
+of
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+as a containment hierarchy. The Libre-Halaal ByStar Digital Ecosystems
+contains both Usage-Side BISOS platforms and Service-Side BISOS
+platforms. The Usage-Side BISOS platform contains Blee. And Blee
+contains Emacs.
+
+Emacs is a 40-plus years old editor centered usage environment, with a
+Lisp engine at its core and an extremely powerful display and editing
+engine in its nucleus. Emacs is one of the oldest Free Software in
+continuous use. Over the past 40 plus years, sophisticated engineers
+have added support for anything and everything to Emacs. Emacs's well
+designed fundamental abstractions make it the most convivial usage
+environment. Emacs is a multi-lingual editor that supports most human
+languages. But out of the box, Emacs is clunky and difficult to use.
+
+Blee serves two purposes:
+
+1. Blee integrates with BISOS and ByStar services and ByStar concepts.
+
+2. Blee makes Emacs less clunky and easier to use without losing any of
+   Emacs's conviviality.
+
+Figure [[#fig:bleeCentricPerspectiveOfBxDE][[fig:bleeCentricPerspectiveOfBxDE]]]
+depicts that Emacs contains a very powerful display engine, a very
+powerful Lisp engine, a very powerful input methods engine and a very
+powerful applications development framework. Emacs is primarily known as
+a textual environment. But it is more than that. Emacs is now capable of
+handling multimedia (images/audio/video) as well. Emacs's display engine
+supports bidirectional (bidi) text and is fully multilingualized. Emacs
+supports input methods for many human languages. Emacs's Lisp engine and
+its applications development framework allow for convenient development
+and customization of applications.
+
+Blee builds on Emacs.
+
+[[/lcnt/lgpc/bystar/permanent/common/figures/bleeFeaturesOverview.pdf]]
+
+Figure [[#fig:bleeFeaturesOverview][[fig:bleeFeaturesOverview]]] shows
+some of the salient features of Blee. For each of the programming
+languages of BISOS (Python, Bash, Elisp, LaTeX, Web environment and
+C/C++) Blee provides Interactive Development Environments (IDEs) that go
+beyond the language and include the frameworks and libraries of BISOS.
+
+The usage of BISOS's Integration Framework (PyCS) described in
+Section [[#sec:PyCS:BISOS'sIntegrationFramework][[sec:PyCS:BISOS'sIntegrationFramework]]]
+is facilitated in Blee through Blee Command Services Players. Each
+Command Service, whether it is a command-line or a remote-operation
+(microservice), is expectations complete and can be run more
+conveniently through Blee.
+
+Of course, all of BISOS and Blee is self-documented. The documentation
+takes the form of Blee-Org-Panels which take the form of related
+org-files. Unlike typical documentation, Blee Org Panels are active. You
+can modify, configure and customize BISOS and Blee from within
+Blee-Org-Panels. Additionally, Blee-Org-Panels can be used by users to
+organize their own information and applications.
+
+All of the key abstractions of BISOS (BPO, PALS, PAAI, AAS), can be
+managed through Blee.
+
+The combination of Blee and BISOS fully wraps development, management
+and usage of ByStar services. Such universality facilitates continuous
+growth of ByStar.
+
+*** Collaborative Org-Mode Enhanced Emacs Generalized Authorship
+(COMEEGA)
+    :PROPERTIES:
+    :CUSTOM_ID: collaborative-org-mode-enhanced-emacs-generalized-authorship-comeega
+    :END:
+
+ [sec:CollaborativeOrg-ModeEnhancedEmacsGeneralizedAuthorship(COMEEGA)]
+
+All coding and all writing in BISOS is based on a model called: COMEEGA
+(Collaborative Org Mode Enhanced Emacs Generalized Authorship). COMEEGA
+is the primary authorship model of Blee and BISOS.
+
+COMEEGA is a Blee concept and an Emacs package for enhancing readability
+and usability of various authorship-major-modes with augmentation by
+org-mode content. COMEEGA is the inverse of Literate Programming, where
+code is written in native programming mode and then augmented with
+comments and doc-strings in org-mode. COMEEGA is applicable to
+authorship in general and programming languages (elisp, python, bash)
+and publishing (LaTeX, html) in particular. When applicable, doc-strings
+can be written in org-mode. File related TODOs and scheduling can be
+specified in org-mode and execution of functions can be facilitated from
+within the file. In effect all org-mode capabilities are combined with
+the native authorship-major-mode capabilities.
+
+The "collaborative" dimension of COMEEGA is inherited from git and
+org-mode. COMEEGA-files are usually in git repos. File level
+collaboration maintains the natural communication context. Org-mode
+TODOs and scheduling, delegation, tracking and rich commenting allow for
+targeted collaboration. org-archiving combined with git fundamentals
+provide convenient collaboration and responsibility oriented
+audit-trails.
+
+** BISOS Software-Service Continuum Apps
+   :PROPERTIES:
+   :CUSTOM_ID: bisos-software-service-continuum-apps
+   :END:
+
+Thus far, we have provided an overview of the BISOS infrastructure.
+Based on these, there are various capabilities that the owner-user can
+profit from. In BISOS, we call these capabilities "Software-Service
+Continuum Applications" (SSCA).
+
+As described in
+Section [[#sec:BISOSModelofPlatformUniversality][[sec:BISOSModelofPlatformUniversality]]]
+--- and shown in Figure [[#fig:bxp-layerings][[fig:bxp-layerings]]],
+part of the capability is realized in software on the user side and part
+of the capability may realized on the services side. Since both the
+user-side and the service-side are based on the universal BISOS platform
+the resulting combined capability is consistent and flexible.
+
+There are many BISOS software-service continuum applications and the
+model is open ended. There is an SSCA for genealogy, for photo
+galleries, and much more.
+
+In BISOS, Software-Service Continuum Applications have a common
+structure. They typically consist of a three layered stack.
+
+1. BISOS-Svc-Layer: BISOS Services Layer runs as a service-provider and
+   interacts with the BISOS-Sw-Layer.
+
+2. BISOS-Sw-Layer: BISOS Software Layer that facilitates work of
+   Blee-SSCA-Agent and interacts with BISOS-Svc-Layer.
+
+3. Blee-SSCA-Agent: Emacs-Lisp Code of Blee which the user interacts
+   with.
+
+The general model of interactions between BISOS-Sw-Layer and
+BISOS-Svc-Layer is typically that of Remote Operations where
+BISOS-Sw-Layer assumes the invoker role and BISOS-Svc-Layer assumes the
+performer role.
+
+There are two BISOS software-service continuum applications that are
+foundational. These are email processing and content generation and
+self-publication.
+
+*** BISOS Email Software-Service Continuum App
+    :PROPERTIES:
+    :CUSTOM_ID: bisos-email-software-service-continuum-app
+    :END:
+
+Email is a foundational application. BISOS Email SSCA is structured as
+follows: The Blee-SSCA-Agent for email is called Blee-Gnus. The
+BISOS-Sw-Layer is called MARMEE (Multi-Account Resident Message Exchange
+Environment). BISOS-Svc-Layer is called BISOS-Mail-Service.
+
+[[/de/lcnt/lgpc/bystar/permanent/common/figures/marmeeBleeGnusIntegration.pdf]]
+
+Figure [[#fig:marmeeBleeGnusIntegration][[fig:marmeeBleeGnusIntegration]]]
+depicts Blee-Gnus and MARMEE in the context of split-MUA (Mail User
+Agent) Blee-Gnus is the usage environment and MARMEE addresses mail
+protocols processing. Gnus is a very flexible mail processing
+environment which is integrated into Emacs.
+
+BISOS uses a modified version of qmail called BISOS-qmail as the MTA
+(Mail Transfer Agent). When used it as a traditional MTA, we refer to it
+as PALS-qmail. And on the usage side we call it MARMEE-qmail. For
+incoming mail within MARMEE, BISOS uses offlineimap.
+
+It is possible to use MARMEE and Blee-Gnus to access other email
+services. This is done through configuration of an AAS (Abstracted
+Accessible Service). For example, in addition to ByStar email, an
+owner-user can also access her gmail account with Blee-Gnus.
+
+*** BISOS Content Generation and Self-Publication
+    :PROPERTIES:
+    :CUSTOM_ID: bisos-content-generation-and-self-publication
+    :END:
+
+ [sec:BISOSContentGenerationandSelf-Publication]
+
+BISOS software-service continuum application for content generation and
+self-publication is called LCNT (Libre Content).
+
+The content generation capabilities of LCNT are akin to Microsoft-Word
+and PowerPoint. But the model of content generation in BISOS is very
+different from Microsoft-Word and Microsoft-PowerPoint. We use LaTeX for
+document processing and COMEEGA-Blee for authorship.
+
+[[./figures/bxMmDocProc.pdf]]
+
+A pictorial overview of multi-media content generation is provided in
+Figure [[#fig:bxMmDocProc][[fig:bxMmDocProc]]]. A single LaTeX source
+file is used to embed text, images, audio and video. This single source
+file is then processed in a variety of ways with a variety of tools
+including XeLaTeX and HeVeA to produce a variety of outputs including
+pdf and html. Multimedia frames/slides are then disposed using
+reveal.js.
+
+BISOS-LCNT also includes facilities for self-publication where the above
+mentioned generated content can be pushed to owner-user's web sites and
+can also be syndicated.
+
+** Privacy and Regulatory Ramifications of BISOS
+   :PROPERTIES:
+   :CUSTOM_ID: privacy-and-regulatory-ramifications-of-bisos
+   :END:
+
+Technological design of BISOS is very different from the technological
+design of proprietary American internet application services.
+
+BISOS capabilities revolve around the abstraction of the individual and
+its belongings and delivery of possession and control of those
+abstractions to the individual. In BISOS, you own and possess your own
+data and you can own and possess your own services.
+
+BISOS's philosophy is privacy by design.
+
+Privacy by design is the antithesis of the proprietary American internet
+application services model, which is based on surveillance by design.
+Surveillance by design leads to centralized architectures and control,
+while privacy by design architecture leads to distributed architectures
+and autonomous control.
+
+Since proprietary American internet application services are
+fundamentally designed for surveillance, the needed societal regulations
+are complex and ineffective. Since ByStar and BISOS are fundamentally
+designed for privacy, societal regulations are very simple and
+effective. ByStar is designed to be self-regulating. ByStar promotes
+proactive regulations as opposed to the current model of reactive
+regulations. The engineers have done the work. The politicians just need
+to understand. The bulk of the needed regulations can amount to
+exclusive use of PALS Libre Services as defined in
+Section [[#sec:DefinitionOfPals][[sec:DefinitionOfPals]]] --- .
+
+** ByStar and BISOS Security
+   :PROPERTIES:
+   :CUSTOM_ID: bystar-and-bisos-security
+   :END:
+
+The fundamental design of BISOS carries significant security
+implications across various dimensions.
+
+Due to its complete open-source nature, the ByStar software supply chain
+is susceptible to the common vulnerabilities present in open-source
+ecosystems. To address these vulnerabilities, we have implemented a
+clear Software Bill of Materials (SBOM) to identify ByStar software
+components, ensuring their origin from trustworthy sources. We've
+adopted a pinned model to prevent unexpected changes and will establish
+mirrors for all used packages at bysource.org and bybinary.org, which
+will become the sole sources for ByStar systems to obtain software
+packages.
+
+ByStar incorporates many leading security practices for authentication,
+authorization, and access control. SSH keys are extensively utilized,
+with passwords rarely employed. Continual scrutiny of BISOS's security
+design is essential.
+
+The combined capabilities of BPOs, PALS, and service recreation within
+BISOS render many traditional security models obsolete. Furthermore,
+autonomous Libre Services, being transferable and easily recreatable,
+further challenge conventional security paradigms. In the event of
+intrusion detection or periodically as a preventive measure,
+contaminated services can be swiftly replaced with fresh instances, with
+potential for full automation.
+
+** ByStar and Edge Oriented Uses of BISOS
+   :PROPERTIES:
+   :CUSTOM_ID: bystar-and-edge-oriented-uses-of-bisos
+   :END:
+
+ByStar's primary offerings are real, tangible and practical autonomy and
+privacy -- on a very large scale. The scope of ByStar is everything. The
+"*" in By* comes from Unix's glob expansion symbol. All ByStar services
+are unified and consistent. The integrated facilities of ByStar are
+intended to be used by a very large segment of the population on this
+planet.
+
+In terms of richness of services, ByStar capabilities are vast ---
+paralleling most of what exists in the proprietary internet today. But
+there are two fundamental differences:
+
+1. the ownership model of the service --- proprietary vs Libre-Halaal
+
+2. the manner of deployment and usage of the services ---
+   rise-of-the-middle vs edge-oriented
+
+These in turn have immense ramifications on autonomy and privacy of the
+individual. The technology used to deliver ByStar services is often
+based on existing open-source software. ByStar does not limit or reduce
+any of the positive aspects of the existing internet. By changing the
+model, it alleviates the negative privacy and autonomy threats.
+
+ByStar does not intend to displace the American internet immediately. It
+is an evolutionary strategy. The Libre-Halaal ByStar digital ecosystem
+exists in parallel with the proprietary American digital ecosystem, but
+with separate values. Throughout this exposition, we compare and
+contrast ByStar with "The American Internet." By that we mean, the
+proprietary American digital ecosystem as it exists today as a set of
+internet application services dominated by American corporations and the
+American model. We fully endorse the global equal access model of the
+internet at layer 3. It is the exclusive rise-of-the-middle American
+model of internet at layer 7 that we reject.
+
+The specific purpose of BISOS is to facilitate the creation of
+Libre-Halaal ByStar Digital Ecosystem.
+
+Let's see how ByStar uses BISOS to realize the underlying model and
+capabilities of the Libre-Halaal ByStar digital ecosystem.
+
+- ByStar is about redecentralization of the internet. Control and
+  ownership is transferred from central corporations to distributed
+  individuals (as autonomous entities). Rise-of-the-middle model is
+  rejected in favor of the autonomous edges model.
+
+  BISOS was designed for all of that. BISOS is inherently edge oriented.
+
+- ByStar software and internet services are un-owned/publicly-owned and
+  internally transparent.
+
+  BISOS's Libre-Halaal software adheres to the AGPL license. All
+  components of ByStar Individual Services can be replicated using their
+  accessible source code.
+
+- Broadly speaking, ByStar services fall into these 3 categories:
+
+  1. ByStar Individual (Possession-Assertable/Autonomous) Services.
+
+  2. ByStar Content Syndication Services.
+
+  3. ByStar Facilitated Direct and Assisted Inter-Autonomous Interaction
+     Services.
+
+  BISOS PALS address (1) and (3). BISOS's Libre Content (LCNT) addresses
+  (2).
+
+- ByStar individual services represent real individuals in the real
+  world. In ByStar, real individuals have real autonomy, real control
+  and real ownership of their own ByStar individual services. ByStar
+  individual services are edge-oriented and can be externally-hosted or
+  self-hosted. When externally hosted, ByStar individual services are
+  regulated to be portable and possession-assertable. For example,
+  Mohsen's ByStar individual services is:\\
+  =mohsen.1.banan.byname.net=.\\
+  You can have your own as: =first.last.byname.net=. Since you own your
+  domain and since you can fully possess the service and your data at
+  will, you have real autonomy.
+
+  BISOS PAAI is designed to support deep domain names and PALS are
+  transferable.
+
+- ByStar individual services are "Possession-Assertable". A portable
+  hosted service can be transferred to the individual who owns it where
+  the individual becomes her own Application Service Provider. For
+  example, people can run their own fully private email servers in their
+  own houses. Just like Hillary Clinton.
+
+  Some early examples of ByStar possession-assertable individual service
+  factory domains are: =ByName.net=, =ByFamily=, =BySMB=, =ByMemory=,
+  =ByAlias=, =ByWhere=, =ByAuthor= and =ByArtist=.
+
+- Direct inter-autonomous relations such as Facebook style photo sharing
+  are accomplished through the individual's own possession-assertable
+  authorization services (individualized OAuth services). Healthy
+  equivalents of capabilities of typical social networks can be created
+  with PALS authorization services where each individual uses his own
+  OAuth service to grant access to his own resources.
+
+  BISOS-OAuth supports this.
+
+- Syndication services such as Youtube style content publication are
+  clearly regulated and integrated with ByStar content production
+  capabilities of individual services. Some early examples of ByStar
+  syndication services are: =ByTopic=, =ByContent=, =ByLookup=,
+  =ByEvent=, =BySource=, =ByBinary=, =BySearch=.
+
+- Facilitated inter-autonomous interaction services such as dating,
+  auction and trade services, are clearly regulated and well integrated
+  with ByStar identity services. Some early examples of ByStar
+  inter-autonomous facilitated interaction services are:\\
+  =ByInteraction=, =ByHookUp=, =ByEntity=.
+
+- ByStar also functions as a hierarchical registrar. For example, Mohsen
+  Banan's registration of =mohsen.1.banan.byname.net= with the
+  =byname.net= registrar results in ownership of
+  =mohsen.1.banan.byname.net= by Mohsen Banan. This domain registration
+  is independent of the service provider that is hosting the portable
+  and possession-assertable individual service. The combination of the
+  portable owned domain and the portability of publicly-owned ByStar
+  individual services allows for transparent transfer of an individual
+  service from one hosting service to another hosting service. This
+  accomplishes the equivalent of Wireless Local Number Portability. Such
+  fundamental user freedoms are absent in the American internet.
+
+  BISOS PALS are portable and transferable.
+
+- ByStar is mostly self-regulated. Upon assertion by the user-owner, the
+  ByStar individual service provider must fully and permanently delete
+  the possession-asserted service and all her data. Or otherwise, ab
+  initio let the owner know that her data will be maintained. Within
+  applicable jurisdictions, ByStar service providers must comply with
+  Lawful Interception (LI) and satisfy regulatory requirements and legal
+  obligations towards Law Enforcement Agencies. Syndication and
+  facilitated inter-autonomous relation providers are subject to known
+  and clear regulations and restrictions.
+
+
+* The Full Big Picture of ByStar, BISOS and Blee
+
+------------------------------------------------------------------------
+#+html: <img align="right" src="profile/images/frontCover-1.jpg" height="230" />
+
+#+html: <p align="center"><font size="+4"><b>Nature of Polyexistentials:</font></b></p>
+#+html: <p align="center"><b>Basis for Abolishment of the Western Intellectual Property Rights Regime</b></p>
+#+html: <p align="center"><b>And Introduction of the Libre-Halaal ByStar Digital Ecosystem</b></p>
+
+#+html: <p> </p>
+#+html: <p align="left">On Line: <a href="https://github.com/bxplpc/120033">PLPC-120033 at Github</a> --  <a href="https://doi.org/10.5281/zenodo.8003846">DOI </a> --- PDF: <a href="https://github.com/bxplpc/120033/blob/main/pdf/c-120033-1_05-book-8.5x11-col-emb-pub.pdf">8.5x11</a> -- <a href="https://github.com/bxplpc/120033/blob/main/pdf/c-120033-1_04-book-a4-col-emb-pub.pdf">A4</a> </p>
+
+#+html: <p align="left">Order Book Prints At Amazon:<a href="https://www.amazon.com/dp/1960957015"> US </a> -- <a href="https://www.amazon.fr/dp/1960957015"> France </a>  -- <a href="https://www.amazon.co.uk/dp/1960957015"> UK </a> -- <a href="https://www.amazon.co.jp/dp/1960957015"> Japan </a> (424 pages --- 6 x 0.96 x 9 inches)</p>
+
+#+html: <p align="left">Comments, Feedback: <a href="mailto:plpc-120033@mohsen.1.banan.byname.net">plpc-120033@mohsen.1.banan.byname.net</a> </p>
+
+------------------------------------------------------------------------
+
+Much of what you find on GitHub today represents the surrogate activities of
+tunnel vision technocrats (sec 12.1.7). These engineers often produce or improve
+component-oriented FOSS results which are usually tactical and limited in scope
+and often end up catering to the interests of corporate American proprietary
+internet service providers. ByStar, however, follows a different model. ByStar's
+Git repositories are structured as public GitHub organizations that align with the
+architecture of ByStar itself. All of these components primarily contribute to
+our own digital ecosystem. Key engineering components of ByStar include: ::\\
+*BISOS:* /By* Internet Services Operating System/ ---
+On top of Debian, BISOS builds a unified and universal framework for developing
+both internet services and software-service continuums that use internet
+services. :: \\
+*Blee: BISOS Libre-Halaal Emacs Environment* --- On top of Emacs and BISOS, Blee creates a
+comprehensive integrated usage and development environment. Blee and BISOS are
+fully integrated. ::\\
+*BPO: BISOS Portable Objects* --- With
+Git and similar to Apt, BPO establishes a platform for packaging of data,
+software, and configurations of software. This creates a uniform model for
+portability, encompassing services and personal information. ::
+*PALS: Possession Assertable Libre Services* --- With
+BPO and BISOS, PALS construct a model for optional self hosting of services.
+In ByStar, individual-oriented services belong to the individual
+and through PALS, autonomy and privacy is enforceable. ::
+For bootstraping BISOS, Blee and ByStar; you can start at: https://github.com/bxgenesis/start
