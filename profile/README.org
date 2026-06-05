@@ -24,6 +24,10 @@
 - [[#blee-naming-convention][Blee Naming Convention]]
 - [[#bystar-libre-halaal-emacs-user-environment-blee][ByStar Libre-Halaal Emacs user Environment (Blee)]]
   - [[#collaborative-org-mode-enhanced-emacs-generalized-authorship][Collaborative Org-Mode Enhanced Emacs Generalized Authorship]]
+- [[#basic-characteristics-of-blee][Basic Characteristics of Blee]]
+  - [[#no-lazy-loading-for-performance--dont-load-x-until-needed-the-goal-is-to-avoid-loading][No Lazy loading for performance — "don't load X until needed." The goal is to avoid loading]]
+  - [[#ordering--dependency-sequencing--when-x-loads-then-configure-it-or-y-must-not-run-until][Ordering / dependency sequencing — "when X loads, then configure it" or "Y must not run until]]
+  - [[#no-vim-support][No Vim support]]
 
 * About Blee --- ByStar Libre-Halaal Emacs Environment
 
@@ -203,6 +207,26 @@ TODOs and scheduling, delegation, tracking and rich commenting allow for
 targeted collaboration. org-archiving combined with git fundamentals
 provide convenient collaboration and responsibility oriented
 audit-trails.
+
+* Basic Characteristics of Blee
+
+Blee has its own character and is different from common emacs and elisp culture.
+
+** No Lazy loading for performance — "don't load X until needed." The goal is to avoid loading
+  things. For someone who starts Emacs once and lives in it for days, this is close to worthless:
+  you pay the startup cost once and amortize it over a week. Deferring just trades a one-time cost
+  for unpredictable mid-session pauses (the stutter when a package finally loads as you invoke
+  it). Your rejection of this is sound. Eager, load-everything-up-front is the right model for a
+  long-lived Emacs.
+
+** Ordering / dependency sequencing — "when X loads, then configure it" or "Y must not run until
+  Z exists." This is about correctness, not speed. It matters regardless of whether everything
+  eventually loads, because the order and the timing of configuration still has to be right. This
+  is the real concern, and it doesn't go away just because you load everything.
+  (with-eval-after-load FILE-OR-FEATURE
+    BODY...)
+
+** No Vim support
 
 
 
